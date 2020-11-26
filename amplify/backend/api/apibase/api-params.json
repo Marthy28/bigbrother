@@ -1,0 +1,35 @@
+{
+    "paths": [
+        {
+            "name": "/upload",
+            "lambdaFunction": "lamdaUpload",
+            "privacy": {
+                "open": true
+            },
+            "policyResourceName": "/upload"
+        }
+    ],
+    "resourceName": "apibase",
+    "apiName": "apibase",
+    "functionArns": [
+        {
+            "lambdaFunction": "lamdaUpload"
+        }
+    ],
+    "privacy": {
+        "auth": 0,
+        "unauth": 0,
+        "authRoleName": "amplify-bigbrother-dev-121632-authRole",
+        "unAuthRoleName": "amplify-bigbrother-dev-121632-unauthRole"
+    },
+    "dependsOn": [
+        {
+            "category": "function",
+            "resourceName": "lamdaUpload",
+            "attributes": [
+                "Name",
+                "Arn"
+            ]
+        }
+    ]
+}
